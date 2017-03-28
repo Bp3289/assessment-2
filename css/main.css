@@ -20,11 +20,22 @@
 	background-size: cover;
 }
 
+#container1 {
+	position: relative;
+	padding-bottom: 300px;
+}
+
+#container2 {
+	position: relative;
+}
+
 .plane1 {
 	display: block;
+	position: absolute;
 }
 
 .plane2 {
 	display: block;
 	margin-top: 100px;
+	position: absolute;
 }
