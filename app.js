@@ -1,22 +1,34 @@
-function Player(image, plane, margin) {
-	this.image = image;
-	this.plane = plane;
-	this.marginTop = margin;
+setInterval(movePlane, 20);
+var keys = {};
 
-	this.prepare = function() {
-		$(this.plane).css("background-image" , this.margin);
-		$(this.plane).css("margin-top", this.marginTop);
-	};
+$(document).keydown(function(e) {
+    keys[e.keyCode] = true;
+});
 
-	this.move = function () {
-		$(this.plane).css("margin-left", "+=10%");
-	};
+$(document).keyup(function(e) {
+    delete keys[e.keyCode];
+});
+
+
+function movePlane() {
+    for (var direction in keys) {
+        if (!keys.hasOwnProperty(direction)) continue;
+        if (direction == 37) {
+            $("#plane").animate({left: "-=5"}, 0);                
+        }
+        if (direction == 38) {
+            $("#plane").animate({top: "-=5"}, 0);  
+        }
+        if (direction == 39) {
+            $("#plane").animate({left: "+=5"}, 0);  
+        }
+        if (direction == 40) {
+            $("#plane").animate({top: "+=5"}, 0);  
+        }
+    }
 }
 
-function Game() {
-	var track = $['.container1'];
-
-	var player1 = new Player('#plane1');
-	var player2 = new Player('plane2');
-
-}
+var newGame = function() {
+    document.getElementById('plane');
+    movePlane();
+};
