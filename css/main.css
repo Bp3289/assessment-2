@@ -25,17 +25,17 @@
 	padding-bottom: 300px;
 }
 
-#container2 {
+.plane {
 	position: relative;
 }
 
-.plane1 {
+#plane1 {
 	display: block;
-	position: absolute;
+	position: relative;
 }
 
-.plane2 {
+#plane2 {
 	display: block;
 	margin-top: 100px;
-	position: absolute;
+	position: relative;
 }
