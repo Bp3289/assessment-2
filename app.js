@@ -13,18 +13,17 @@ $(document).keyup(function(e) {
 function movePlane() {
     for (var direction in keys) {
         if (!keys.hasOwnProperty(direction)) continue;
-        if (direction == 37) {
-            $("#plane").animate({left: "-=5"}, 0);                
-        }
+        
         if (direction == 39) {
-            $("#plane").animate({left: "+=5"}, 0);  
+            $("#plane1").animate({left: "+=5"}, 0);  
         }
-       
+        
+        if (direction == 68) {
+            $("#plane2").animate({left: "+=5"}, 0);  
         }
-    
+    }
 }
 
-var newGame = function() {
+var startGame = function() {
     document.getElementById('plane');
-    movePlane();
 };
