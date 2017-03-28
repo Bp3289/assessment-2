@@ -24,6 +24,18 @@ function movePlane() {
     }
 }
 
+var raceTime1 = Math.floor( (Math.random() * 5000) + 1);
+var raceTime2 = Math.floor( (Math.random() * 5000) + 1);
+
+
+var isComplete = false;
+
+
+
+
+
+
+
 var startGame = function() {
     document.getElementById('plane');
 };
